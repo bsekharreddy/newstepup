@@ -1,0 +1,71 @@
+﻿
+
+@model IEnumerable<StepUpPL.Models.Trainee>
+
+@{
+    ViewBag.Title = "FetchByName1";
+    Layout = "~/Views/Shared/_newui.cshtml";
+}
+
+<h4>Trainee Details</h4>
+
+
+
+@using (Html.BeginForm("FetchByName1", "Login", FormMethod.Get))
+{
+    <p style="text-align:left">
+        <h5 style="text-align:left">  Find by PSnumber / Email / Skillset : @Html.TextBox("traineePSNum", ViewBag.CurrentFilter as string) <input type="submit" value="Search" /></h5>
+        <h6 style="text-align:left"> @Html.ActionLink("Back", "FetchTrainee1") </h6>
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Trainee_PSNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Trainee_EmailiD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().CurrentSkillSet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().ExpectedTraining_Phase1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().ExpectedTraining_Phase2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().TraineeDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trainee_PSNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trainee_EmailiD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentSkillSet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpectedTraining_Phase1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpectedTraining_Phase2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TraineeDate)
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+

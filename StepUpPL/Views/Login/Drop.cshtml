@@ -1,0 +1,24 @@
+﻿@model List<SelectListItem>
+@{
+    ViewBag.Title = "Drop";
+    Layout = "~/Views/Shared/_newui.cshtml";
+}
+
+<h4>List of Faculties</h4>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm("Drop", "Login", FormMethod.Post))
+    {
+        @Html.DropDownList("ddlCustomers", Model)
+        <br />
+        <br />
+        <input type="submit" value="Submit" />
+    }
+
+</body>
+</html>

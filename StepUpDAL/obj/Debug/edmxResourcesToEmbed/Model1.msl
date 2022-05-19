@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TraineeProgramModelStoreContainer" CdmEntityContainer="TraineeProgramContext">
+    <EntitySetMapping Name="AdminCredintials">
+      <EntityTypeMapping TypeName="TraineeProgramModel.AdminCredintial">
+        <MappingFragment StoreEntitySet="AdminCredintials">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Faculties">
+      <EntityTypeMapping TypeName="TraineeProgramModel.Faculty">
+        <MappingFragment StoreEntitySet="Faculty">
+          <ScalarProperty Name="FacultyPS" ColumnName="FacultyPS" />
+          <ScalarProperty Name="FacultyName" ColumnName="FacultyName" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Track" ColumnName="Track" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LttsCredintials">
+      <EntityTypeMapping TypeName="TraineeProgramModel.LttsCredintial">
+        <MappingFragment StoreEntitySet="LttsCredintials">
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="LoginPassword" ColumnName="LoginPassword" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TraineeInformations">
+      <EntityTypeMapping TypeName="TraineeProgramModel.TraineeInformation">
+        <MappingFragment StoreEntitySet="TraineeInformation">
+          <ScalarProperty Name="PSnumber" ColumnName="PSnumber" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="CurrentSkillSet" ColumnName="CurrentSkillSet" />
+          <ScalarProperty Name="ExpectedTraining_Phase1" ColumnName="ExpectedTraining_Phase1" />
+          <ScalarProperty Name="ExpectedTraining_Phase2" ColumnName="ExpectedTraining_Phase2" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspFacultyDetails" FunctionName="TraineeProgramModel.Store.uspFacultyDetails" />
+    <FunctionImportMapping FunctionImportName="uspLoginDetails" FunctionName="TraineeProgramModel.Store.uspLoginDetails" />
+    <FunctionImportMapping FunctionImportName="uspRequestCredintials" FunctionName="TraineeProgramModel.Store.uspRequestCredintials" />
+    <FunctionImportMapping FunctionImportName="uspRequestDetails" FunctionName="TraineeProgramModel.Store.uspRequestDetails" />
+    <FunctionImportMapping FunctionImportName="uspUpdatepass" FunctionName="TraineeProgramModel.Store.uspUpdatepass" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "BulkUpload";
+    Layout = "~/Views/Shared/_newui.cshtml";
+}
+
+<h3>Bulk Upload</h3>
+<!DOCTYPE html>
+
+<html>
+</head>
+<body>
+    @using (Html.BeginForm("BulkUpload", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div>
+            <h5>Upload File</h5>
+            <input type="file" id="file" name="file" /><br> <br />
+            <input type="submit" value="Upload File" />
+        </div>
+        <!--Display Error Message-->
+        <div style="color:red;">@ViewBag.Message</div>
+
+
+    }
+</body>
+<div>
+    @Html.ActionLink("Previous Page", "FetchTrainee")
+</div>
+</html>
+

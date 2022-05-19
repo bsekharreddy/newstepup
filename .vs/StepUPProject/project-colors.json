@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "bb3c1436-71b1-4f68-bd9b-f4eab1936df0": {
+      "ProjectGuid": "bb3c1436-71b1-4f68-bd9b-f4eab1936df0",
+      "DisplayName": "StepUPAPI",
+      "ColorIndex": 0
+    },
+    "5aefe59a-0ff0-480d-93b0-8c2f634e1b93": {
+      "ProjectGuid": "5aefe59a-0ff0-480d-93b0-8c2f634e1b93",
+      "DisplayName": "StepUpDTO",
+      "ColorIndex": 1
+    },
+    "e1ae7094-839d-4039-a2b2-76f55bde9122": {
+      "ProjectGuid": "e1ae7094-839d-4039-a2b2-76f55bde9122",
+      "DisplayName": "StepUpBL",
+      "ColorIndex": 2
+    },
+    "56cca78b-fb9a-47bb-8f56-39d956ca0689": {
+      "ProjectGuid": "56cca78b-fb9a-47bb-8f56-39d956ca0689",
+      "DisplayName": "StepUpDAL",
+      "ColorIndex": 3
+    },
+    "7bb136bc-2e0a-4834-a981-21714f73705b": {
+      "ProjectGuid": "7bb136bc-2e0a-4834-a981-21714f73705b",
+      "DisplayName": "StepUpPL",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 5
+}

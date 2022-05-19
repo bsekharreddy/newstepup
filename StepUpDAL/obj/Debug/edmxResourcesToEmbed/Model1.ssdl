@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TraineeProgramModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdminCredintials">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Faculty">
+    <Key>
+      <PropertyRef Name="FacultyPS" />
+    </Key>
+    <Property Name="FacultyPS" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FacultyName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmailID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Track" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LttsCredintials">
+    <Key>
+      <PropertyRef Name="LoginID" />
+    </Key>
+    <Property Name="LoginID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LoginPassword" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TraineeInformation">
+    <Key>
+      <PropertyRef Name="PSnumber" />
+    </Key>
+    <Property Name="PSnumber" Type="int" Nullable="false" />
+    <Property Name="EmailID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="CurrentSkillSet" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ExpectedTraining_Phase1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ExpectedTraining_Phase2" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+  </EntityType>
+  <Function Name="uspFacultyDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FacultyPS" Type="int" Mode="In" />
+    <Parameter Name="FacultyName" Type="varchar" Mode="In" />
+    <Parameter Name="EmailID" Type="varchar" Mode="In" />
+    <Parameter Name="Track" Type="varchar" Mode="In" />
+    <Parameter Name="Password" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspLoginDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Logid" Type="varchar" Mode="In" />
+    <Parameter Name="LoginPass" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspRequestCredintials" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoginID" Type="varchar" Mode="In" />
+    <Parameter Name="LoginPassword" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspRequestDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PSno" Type="int" Mode="In" />
+    <Parameter Name="Emailid" Type="varchar" Mode="In" />
+    <Parameter Name="CurrentSkillSet" Type="varchar" Mode="In" />
+    <Parameter Name="expectedTraining_Phase1" Type="varchar" Mode="In" />
+    <Parameter Name="expectedTraining_Phase2" Type="varchar" Mode="In" />
+    <Parameter Name="date" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="uspUpdatepass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoginID" Type="varchar" Mode="In" />
+    <Parameter Name="LoginPassword" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="TraineeProgramModelStoreContainer">
+    <EntitySet Name="AdminCredintials" EntityType="Self.AdminCredintials" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Faculty" EntityType="Self.Faculty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LttsCredintials" EntityType="Self.LttsCredintials" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TraineeInformation" EntityType="Self.TraineeInformation" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

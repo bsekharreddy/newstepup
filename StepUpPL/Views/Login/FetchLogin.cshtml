@@ -1,0 +1,36 @@
+﻿@model IEnumerable<StepUpPL.Models.LoginModel>
+
+@{
+    ViewBag.Title = "FetchLogin";
+    Layout = "~/Views/Shared/_newui.cshtml";
+}
+
+<h3>Admin Control Page</h3>
+
+<p>
+    @Html.ActionLink("Add New Login Credentials", "AddLoginDetails")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @Html.ActionLink("Add Faculty Details", "AddFacultyDetails")
+</p>
+
+
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.loginId)
+        </th>
+        
+       
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.loginId)
+        </td>
+       
+      
+    </tr>
+}*@
+
+</table>
+
+
